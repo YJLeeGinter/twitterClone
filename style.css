@@ -1,0 +1,190 @@
+body{
+    font-family:sans-serif;
+}
+
+/* font */
+.light-text{
+    color: #93a1ad;
+    font-size: 13px;
+}
+
+.tweet-content-badge, .left-arrow{
+    color: #1da1f2;
+}
+
+/* layout */
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    border: lightgray 1px solid;
+    border-bottom: 0;
+}
+
+/* header area */
+.header{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.btn-left-arrow{
+    grid-column: 1/ 2;
+    grid-row: 1 / -1;
+}
+
+.header-name, .tweets{
+    margin: 0;
+}
+
+.header-name{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    margin-top: 15px;
+}
+
+.tweets{
+    grid-column: 2/-1;
+    grid-row: 2/3;
+}
+
+/* cover-photo area*/
+.cover-photo{
+    margin-top: -10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main-cover-photo{
+    width: 100%;
+    margin-top: 0;
+    grid-column: 1/-1;
+}
+
+.btn-follow{
+    order: 3;
+    margin-top: 10px;
+    margin-right: 10px;
+    grid-column: 4/ span 1;
+}
+
+.main-avartar-photo{
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 100px;
+    grid-column: 1;
+    margin-top: -3em;
+    margin-left: 0.5em;
+}
+
+/* profile detail area*/
+
+.profile-detail{
+    margin: 1em;
+}
+
+.profile-detail-name, .profile-detail-user-name{
+    margin: 0;
+}
+
+.followers{
+    margin-left: 1.5em;
+}
+
+strong{
+    color: black;
+}
+
+/* tweet-link area */
+.tweet-links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.tweet-link{
+    text-align: center;
+    font-weight: bold;
+    padding: 0.8em 0;
+    font-size: 14px;
+    color: #5b7083;
+    border-bottom: 1px solid lightgray;
+}
+
+/* btns */
+
+.btn-left-arrow{
+    border: none;
+    background: 0;
+    cursor: pointer;
+
+}
+.left-arrow{
+    font-size: 20px;
+}
+
+.btn-follow{
+    background-color: #1da1f2 ;
+    border: none;
+    color: white;
+    border-radius: 15px;
+    font-weight: bold;    
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5em 1.2em;
+    margin-left: 2em;
+}
+
+/* tweet-content-container*/
+
+.indivisual-tweet-content{
+    border-bottom: 1px solid lightgray;
+    padding: 1em;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    grid-template-areas: 'avartar user-info user-info user-info more'
+                         'avartar content content content content'
+                         'avartar comment retweet like share';
+                         column-gap: 1em;
+
+}
+
+.indivisual-tweet-content > *{
+    margin: 0;
+}
+
+.tweet-content-avartar{
+    width: 50px;
+    border-radius: 50%;
+    grid-area: avartar;
+}
+
+.user-info{
+    grid-area: user-info;
+}
+
+.more{
+    grid-area: more;
+    justify-self: flex-end;
+}
+
+.tweet-content-text{
+    grid-area: content;
+    margin: 0.5em 0;
+}
+
+.comment{
+    grid-area: comment;
+}
+
+.retweet{
+    grid-area: retweet;
+}
+
+.like{
+    grid-area: like;
+}
+
+.share{
+    grid-area: share;
+}
+
